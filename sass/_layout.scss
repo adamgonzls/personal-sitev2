@@ -1,3 +1,129 @@
-h1 {
-	color: red;
+/****************************************
+  Inherited Syles
+*****************************************/
+
+/*
+See this explanation for details
+https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+
+html {
+    box-sizing: border-box;
+    color: #444;
+    font: 12pt 'Roboto', Arial;
+    font-weight: 300;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+
+/****************************************
+  Defaults
+*****************************************/
+
+a {
+	text-decoration: none;
+}
+
+/****************************************
+  Helpers
+*****************************************/
+
+
+/****************************************
+  Layout
+*****************************************/
+
+
+
+
+.primary-header {
+
+	padding: 20px 20px;
+	text-transform: uppercase;
+	text-align: center;
+	
+	.main-nav ul {
+		margin: 0;
+		list-style-type: none;
+		padding-left: 0;
+
+	}
+	
+	@include wider-than(480px) {
+		.main-nav li {
+			display: inline-block;
+		}
+	}
+
+	@include wider-than(768px) {
+		display: flex;
+		font-size: 1.5em;	
+	}
+	
+}
+
+.logo {
+	// padding-top: 10px;
+	// padding-bottom: 10px;
+}
+
+.logo span {
+	color: white;
+	background-color: $rubyred;
+	font-weight: 400;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+
+.hero {
+	background-color: #999;
+	background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .9)), url(../images/sublime-text-original.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 200px;
+	text-align: center;
+
+	h1 {
+		color: $white;
+	}
+
+}
+
+.about {
+	
+	> div {
+		display: flex;
+	}
+}
+
+
+/****************************************
+  Components
+*****************************************/
+
+/*
+* Basic structure of all sections
+*/
+
+.container {
+	width: 100%;
+	background-color: pink;
+
+	section {
+		padding: 20px;
+
+		h2 {
+			font-size: 1.5em;
+			border-bottom: 2px solid rgba(255, 255, 255, .8);
+			text-transform: uppercase;
+		}
+	}
 }

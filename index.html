@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Adam Gonzales Web Developer</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:700,300,400,100' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:700,300,400|Montserrat" rel='stylesheet' type="text/css">
 	<link rel="stylesheet" href="./css/styles.css">
 
 </head>
@@ -33,7 +35,7 @@
 			<section id="about" class="about">
 				<h2>About</h2>
 				<div>
-					<img src="" alt="adam image goes here">
+					<img src="./images/adam-200px-bw.jpg" width="200" height="200" alt="adam image goes here">
 					<h1>Hi my name is Adam Gonzales and I'm a web developer</h1>
 				</div>
 			</section>
@@ -41,66 +43,136 @@
 		<div class="container">
 			<section id="skills" class="skills">
 				<h2>Skills</h2>
-				<ul>
-					<li class="uppercase">html</li>
-					<li class="uppercase">css</li>
-					<li>JavaScript</li>
-					<li>jQuery</li>
-					<li>handlebars</li>
-					<li>Bootstrap</li>
-					<li>Foundation</li>
-					<li>Gulp</li>
-					<li>npm</li>
-				</ul>
+				<div>
+					<ul>
+						<li>
+							<i class="fa fa-check-circle-o"></i>HTML
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>CSS
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>Sass
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>JavaScript
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>jQuery
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>Handlebars.js
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>Backbone.js
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>Bootstrap
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>Foundation
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>Gulp
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>npm
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>Bower
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>Git
+						</li>
+						<li>
+							<i class="fa fa-check-circle-o"></i>GitHub
+						</li>
+					</ul>
+				</div>
 			</section>
 		</div>
 		<div class="container">
 			<section id="portfolio" class="portfolio">
 				<h2>Portfolio</h2>
-				<div class="project">
-					<img class="project-image" src="" alt="image of project in a circle">
+				<div class="project-tile">
+					<img class="project-image" src="./images/adam-200px-bw.jpg" alt="image of project in a circle to left">
 					<div class="project-info">
-						<h3>Project Name</h3>
-						<p><span>Description:</span>This site was built to showcase this company's product.</p>
+						<h3><span>Project:</span> Personal Portfolio</h3>
+						<p><span>Description:</span>Resume website designed and coded by hand to portray a positive image.</p>
+						<ul class="technology-used">
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>Sass</li>
+							<li>jQuery</li>
+							<li>Gulp</li>
+							<li>npm</li>
+							<li>Responsive</li>
+						</ul>
 					</div>
-					<ul class="technology-used">
-						<li>npm</li>
-						<li>sass</li>
-					</ul>
+				</div>
+				<div class="project-tile">
+					<img class="project-image" src="./images/somewhere-200px.jpg" alt="image of project in a circle to left">
+					<div class="project-info">
+						<h3><span>Project:</span> Somewhere Travel</h3>
+						<p><span>Description:</span>Landing page for travel/adventure brand "Somewhere". This site was hand-coded from a graphic designer's rendering.</p>
+						<ul class="technology-used">
+							<li>HTML</li>
+							<li>CSS</li>
+						</ul>
+					</div>
+				</div>
+				<div class="project-tile">
+					<img class="project-image" src="./images/coloristic-200px.jpg" alt="image of project in a circle to left">
+					<div class="project-info">
+						<h3><span>Project:</span> Coloristic</h3>
+						<p><span>Description:</span>Website for design firm Coloristic</p>
+						<ul class="technology-used">
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>Foundation</li>
+							<li>Responsive</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 		</div>
 		<div class="container">
 			<section id="education" class="education">
 				<h2>Education</h2>
-				<h3>Rockit Bootcamp</h3>
-				<p>An intensive course informing us of web development... Look and see what other people put here...</p>
-				<h3>Collins College</h3>
-				<h3>Self Study</h3>
+				<div>
+					<h3>Rockit Bootcamp</h3>
+					<h4>Certificate of Completion - Front-End Web Development</h4>
+					<h3>Collins College</h3>
+					<h4>Bachelor of Arts - Visual Communication</h4>
+				</div>
 			</section>
 		</div>
 		<div class="container">
 			<section id="contact" class="contact">
+				<h2>Contact</h2>
 				<div class="social">
 					<ul>
 						<li>
-							<a href="#"><i>github</i></a>
+							<a href="mailto:adamgonzales1@gmail.com?subject=Hi%20Adam"><i class="fa fa-envelope"></i></a>
 						</li>
 						<li>
-							<a href="#"><i>twitter</i></a>
+							<a href="https://github.com/adamgonzls" target="_blank"><i class="fa fa-github"></i></a>
 						</li>
 						<li>
-							<a href="#"><i>linkedin</i></a>
+							<a href="https://www.linkedin.com/in/adamgonzales1" target="_blank"><i class="fa fa-linkedin"></i></a>
+						</li>
+						<li>
+							<a href="https://twitter.com/adamgonzls" target="_blank"><i class="fa fa-twitter"></i></a>
 						</li>
 					</ul>
 				</div>
 			</section>
 		</div>
-		
-
-
-
-
+		<div class="container">
+			<footer class="primary-footer">
+				<p>&copy; 2016 Adam Gonzales</p>
+			</footer>
+		</div>
 	</div> 
 </body>
 </html>

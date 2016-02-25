@@ -54,6 +54,15 @@ a {
   padding-right: 5px; }
 
 .hero {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #999;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(../images/sublime-text-original.png);
   background-repeat: no-repeat;
@@ -62,12 +71,117 @@ a {
   height: 200px;
   text-align: center; }
   .hero h1 {
-    color: #eee; }
+    color: #fff; }
 
-.about > div {
+.about {
+  background-color: #fff; }
+  .about > div {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center; }
+    @media screen and (min-width: 500px) {
+      .about > div {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; } }
+    .about > div img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%; }
+      @media screen and (min-width: 600px) {
+        .about > div img {
+          margin: 0 20px; } }
+
+/*
+* Skills section
+*/
+.skills ul {
+  list-style-type: none;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .skills ul li {
+    margin: 5px;
+    width: 100%; }
+  .skills ul i::after {
+    content: "";
+    margin-right: 5px; }
+
+/*
+* Portfolio section
+*/
+.portfolio {
+  background-color: #fff; }
+  .portfolio .project-tile img {
+    border-radius: 50%;
+    display: block;
+    margin: auto; }
+    @media screen and (min-width: 480px) {
+      .portfolio .project-tile img {
+        margin-right: 20px; } }
+  @media screen and (min-width: 480px) {
+    .portfolio .project-tile {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; } }
+  .portfolio .project-tile .project-info .technology-used {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+    padding-left: 0; }
+    .portfolio .project-tile .project-info .technology-used li {
+      font-size: .75em;
+      font-weight: 100;
+      margin: 2px;
+      padding: 3px;
+      color: #fff;
+      background-color: #fa812f;
+      border-radius: 3px; }
+
+/*
+* Education section
+*/
+.education > div h3 {
+  font-weight: 400; }
+
+.education > div h4 {
+  padding-left: 10px;
+  border-left: 2px solid #fa4032; }
+
+/*
+* Contact section
+*/
+.contact {
+  background-color: #fff; }
+  .contact .social ul {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 50px; }
+    .contact .social ul li {
+      display: inline-block; }
+      .contact .social ul li a {
+        display: inline-block;
+        font-size: 2em;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: rgba(190, 186, 194, 0.75); }
+      .contact .social ul li a:hover {
+        color: #bebac2; }
+
+.primary-footer {
+  background-color: #4c3f54;
+  color: #bebac2; }
+  .primary-footer > p {
+    text-align: center;
+    margin: 0;
+    padding: 20px; }
 
 /****************************************
   Components
@@ -79,8 +193,11 @@ a {
   width: 100%;
   background-color: pink; }
   .container section {
-    padding: 20px; }
+    padding: 50px 20px; }
     .container section h2 {
       font-size: 1.5em;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+      border-bottom: 2px solid rgba(190, 186, 194, 0.8);
       text-transform: uppercase; }
+    .container section > div {
+      width: 90%;
+      margin: 0 auto; }

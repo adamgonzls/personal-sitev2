@@ -15,8 +15,13 @@
 		<div class="container">
 			<header class="primary-header">
 				<div class="logo"><span>Adam</span> Gonzales</div>
+				<div class="hamburger">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
 				<nav class="main-nav">
-					<ul>
+					<ul class="menu">
 						<li><a href="#about">about</a></li>
 						<li><a href="#skills">skills</a></li>
 						<li><a href="#portfolio">portfolio</a></li>
@@ -94,44 +99,46 @@
 		<div class="container">
 			<section id="portfolio" class="portfolio">
 				<h2>Portfolio</h2>
-				<div class="project-tile">
-					<img class="project-image" src="./images/adam-200px-bw.jpg" alt="image of project in a circle to left">
-					<div class="project-info">
-						<h3><span>Project:</span> Personal Portfolio</h3>
-						<p><span>Description:</span>Resume website designed and coded by hand to portray a positive image.</p>
-						<ul class="technology-used">
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>Sass</li>
-							<li>jQuery</li>
-							<li>Gulp</li>
-							<li>npm</li>
-							<li>Responsive</li>
-						</ul>
+				<div class="projects">
+					<div class="project-tile">
+						<img class="project-image" src="./images/adam-200px-bw.jpg" alt="image of project in a circle to left">
+						<div class="project-info">
+							<h3><span>Project:</span> Personal Portfolio</h3>
+							<p><span>Description:</span>Resume website designed and coded by hand to portray a positive image.</p>
+							<ul class="technology-used">
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>Sass</li>
+								<li>jQuery</li>
+								<li>Gulp</li>
+								<li>npm</li>
+								<li>Responsive</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class="project-tile">
-					<img class="project-image" src="./images/somewhere-200px.jpg" alt="image of project in a circle to left">
-					<div class="project-info">
-						<h3><span>Project:</span> Somewhere Travel</h3>
-						<p><span>Description:</span>Landing page for travel/adventure brand "Somewhere". This site was hand-coded from a graphic designer's rendering.</p>
-						<ul class="technology-used">
-							<li>HTML</li>
-							<li>CSS</li>
-						</ul>
+					<div class="project-tile">
+						<img class="project-image" src="./images/somewhere-200px.jpg" alt="image of project in a circle to left">
+						<div class="project-info">
+							<h3><span>Project:</span> Somewhere Travel</h3>
+							<p><span>Description:</span>Landing page for travel/adventure brand "Somewhere". This site was hand-coded from a graphic designer's rendering.</p>
+							<ul class="technology-used">
+								<li>HTML</li>
+								<li>CSS</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class="project-tile">
-					<img class="project-image" src="./images/coloristic-200px.jpg" alt="image of project in a circle to left">
-					<div class="project-info">
-						<h3><span>Project:</span> Coloristic</h3>
-						<p><span>Description:</span>Website for design firm Coloristic</p>
-						<ul class="technology-used">
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>Foundation</li>
-							<li>Responsive</li>
-						</ul>
+					<div class="project-tile">
+						<img class="project-image" src="./images/coloristic-200px.jpg" alt="image of project in a circle to left">
+						<div class="project-info">
+							<h3><span>Project:</span> Coloristic</h3>
+							<p><span>Description:</span>Website for design firm Coloristic</p>
+							<ul class="technology-used">
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>Foundation</li>
+								<li>Responsive</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -173,6 +180,8 @@
 				<p>&copy; 2016 Adam Gonzales</p>
 			</footer>
 		</div>
-	</div> 
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+	<script src="./js/index.js"></script>
 </body>
 </html>

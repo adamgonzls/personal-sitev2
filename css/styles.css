@@ -28,30 +28,63 @@ a {
 /****************************************
   Layout
 *****************************************/
+/**
+ * Header section
+ */
 .primary-header {
   padding: 20px 20px;
   text-transform: uppercase;
   text-align: center; }
-  .primary-header .main-nav ul {
+  .primary-header .logo {
+    margin-right: 20px; }
+  .primary-header .logo span {
+    color: white;
+    background-color: #fa4032;
+    font-weight: 400;
+    padding-left: 5px;
+    padding-right: 5px; }
+  .primary-header .hamburger {
+    background-color: green; }
+    .primary-header .hamburger .line {
+      border-bottom: 4px solid #bbb;
+      width: 35px;
+      margin-bottom: 6px; }
+    @media screen and (min-width: 500px) {
+      .primary-header .hamburger {
+        display: none; } }
+  .primary-header .menu {
+    display: none;
     margin: 0;
     list-style-type: none;
     padding-left: 0; }
-  @media screen and (min-width: 480px) {
-    .primary-header .main-nav li {
-      display: inline-block; } }
-  @media screen and (min-width: 768px) {
+    @media screen and (min-width: 500px) {
+      .primary-header .menu {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        .primary-header .menu li {
+          -webkit-flex: auto;
+          -ms-flex: auto;
+          flex: auto; }
+          .primary-header .menu li a {
+            display: inline-block;
+            padding: 5px;
+            color: green; } }
+  .primary-header .slide-menu {
+    display: block;
+    height: 360px; }
+  @media screen and (min-width: 500px) {
     .primary-header {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      font-size: .9em; } }
+  @media screen and (min-width: 600px) {
+    .primary-header {
+      font-size: 1em; } }
+  @media screen and (min-width: 768px) {
+    .primary-header {
       font-size: 1.5em; } }
-
-.logo span {
-  color: white;
-  background-color: #fa4032;
-  font-weight: 400;
-  padding-left: 5px;
-  padding-right: 5px; }
 
 .hero {
   display: -webkit-flex;
@@ -111,41 +144,61 @@ a {
     content: "";
     margin-right: 5px; }
 
-/*
-* Portfolio section
-*/
+/**
+ * Portfolio section
+ */
 .portfolio {
   background-color: #fff; }
-  .portfolio .project-tile img {
-    border-radius: 50%;
-    display: block;
-    margin: auto; }
-    @media screen and (min-width: 480px) {
-      .portfolio .project-tile img {
-        margin-right: 20px; } }
-  @media screen and (min-width: 480px) {
-    .portfolio .project-tile {
+  @media screen and (min-width: 768px) {
+    .portfolio .projects {
       display: -webkit-flex;
       display: -ms-flexbox;
-      display: flex; } }
-  .portfolio .project-tile .project-info .technology-used {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    list-style-type: none;
-    padding-left: 0; }
-    .portfolio .project-tile .project-info .technology-used li {
-      font-size: .75em;
-      font-weight: 100;
-      margin: 2px;
-      padding: 3px;
-      color: #fff;
-      background-color: #fa812f;
-      border-radius: 3px; }
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
+  .portfolio .project-tile {
+    -webkit-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    background-color: yellow;
+    border: 2px solid black; }
+    .portfolio .project-tile img {
+      border-radius: 50%;
+      display: block;
+      margin: auto; }
+      @media screen and (min-width: 480px) {
+        .portfolio .project-tile img {
+          margin-right: 20px; } }
+    @media screen and (min-width: 480px) {
+      .portfolio .project-tile {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; } }
+    @media screen and (min-width: 768px) {
+      .portfolio .project-tile {
+        width: 40%; } }
+    .portfolio .project-tile .project-info .technology-used {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      list-style-type: none;
+      padding-left: 0; }
+      .portfolio .project-tile .project-info .technology-used li {
+        font-size: .75em;
+        font-weight: 100;
+        margin: 2px;
+        padding: 3px;
+        color: #fff;
+        background-color: #fa812f;
+        border-radius: 3px; }
 
-/*
-* Education section
-*/
+/**
+ * Education section
+ */
 .education > div h3 {
   font-weight: 400; }
 
@@ -153,9 +206,9 @@ a {
   padding-left: 10px;
   border-left: 2px solid #fa4032; }
 
-/*
-* Contact section
-*/
+/**
+ * Contact section
+ */
 .contact {
   background-color: #fff; }
   .contact .social ul {
@@ -176,7 +229,7 @@ a {
         color: #bebac2; }
 
 .primary-footer {
-  background-color: #4c3f54;
+  background-color: #000;
   color: #bebac2; }
   .primary-footer > p {
     text-align: center;
@@ -186,9 +239,9 @@ a {
 /****************************************
   Components
 *****************************************/
-/*
-* Basic structure of all sections
-*/
+/**
+ * Basic structure of all sections
+ */
 .container {
   width: 100%;
   background-color: pink; }

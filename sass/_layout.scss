@@ -39,34 +39,91 @@ a {
 *****************************************/
 
 /**
+ * Basic structure of all sections
+ */
+
+.page {
+	
+	.container {
+		width: 100%;
+		// background-color: pink;
+	
+		section {
+			padding-top: 50px;
+			padding-bottom: 100px;
+			padding-left: 20px;
+			padding-right: 20px;
+
+			h2 {
+				font-size: 1.5em;
+				border-bottom: 2px solid rgba($french-gray, .8);
+				text-transform: uppercase;
+			}
+		
+			> div {
+				width: 90%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.container:nth-child(even) h2 {
+		color: $white;
+		// background-color: yellow;
+	}
+
+	.container:nth-child(odd) h2 {
+		// color: red;
+		// background-color: blue;
+	}
+
+}
+
+
+/**
  * Header section
  */
 
 .primary-header {
-
-	padding: 20px 20px;
+	position: fixed;
+	width: 100%;
+	background-color: $black;
+	// padding: 20px 20px;
 	text-transform: uppercase;
 	text-align: center;
 
+
 	.logo {
-		margin-right: 20px;
+		color: $white;
+		padding: 20px;
+		border-bottom: 1px solid #777;
+
+		@include wider-than(500px) {
+			margin-right: 20px;
+			height: 77px;
+			line-height: 77px;
+		} 
 	}
 
 	.logo span {
-		color: white;
+		// color: $white;
 		background-color: $rubyred;
 		font-weight: 400;
 		padding-left: 5px;
 		padding-right: 5px;
 	}
-
+	
 	.hamburger {
+		margin-left: 20px;
 		
-		background-color: green;
+		.line:first-child {
+			margin-top: 5px;
+		}
+
 		.line {
 			border-bottom: 4px solid #bbb;
 			width: 35px;
-			margin-bottom: 6px;
+			margin-bottom: 5px;
 		}
 
 		@include wider-than(500px) {
@@ -76,14 +133,30 @@ a {
 	}
 	
 	.main-nav {
-		// width: 100%;
+		border: 1px solid #777;
+
+		@include wider-than(500px) {
+			border: 0;
+		}
 	}
 
 	.menu {
+		margin-top: 0;
 		display: none;
-		margin: 0;
+		margin-bottom: 0;
 		list-style-type: none;
 		padding-left: 0;
+		padding: 5px;
+
+		a {
+			color: #999;
+		}
+
+		a:hover {
+			color: $white;
+			background-color: $rubyred;
+		}
+
 
 		@include wider-than(500px) {
 			display: flex;
@@ -94,11 +167,15 @@ a {
 
 				a {
 					display: inline-block;
-					padding: 5px;
-					color: green;
+					padding: 20px;
+
 				}
+
+
 			}
 		}
+
+
 	}
 
 	.slide-menu {
@@ -128,12 +205,17 @@ a {
 	flex-direction: column;
 	justify-content: center;
 	background-color: #999;
-	background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .9)), url(../images/sublime-text-original.png);
+	background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .9)), url(../images/sublime-text-1200px.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	height: 200px;
+	height: 400px;
 	text-align: center;
+	// margin-top: 89px;
+	
+	@include wider-than(480px) {
+		// height: 300px;
+	}
 
 	h1 {
 		color: $white;
@@ -142,17 +224,14 @@ a {
 }
 
 .about {
-	
 	background-color: $white;
 
 	> div {
-		
 		// display: flex;
 		// flex-direction: column;
 		justify-content: center;
 		text-align: center;
 
-		
 		@include wider-than(500px) {
 			display: flex;	
 		}
@@ -174,15 +253,33 @@ a {
 */
 
 .skills {
+	background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/collaboration-1200px.jpg);
+	background-repeat: no-repeat;
+	// background-attachment: fixed;
+	background-size: cover;
 
 	ul {
 		list-style-type: none;
+		color: $white;
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
+		padding-left: 0;
 		
 		li {
+			flex: auto;
+			font-size: 1.1em;
 			margin: 5px;
 			width: 100%;
+			// align-text: center;
+
+			@include wider-than(480px) {
+				width: calc(50% - 10px);
+			}
+
+			@include wider-than(1000px) {
+				max-width: calc(33.33% - 10px);
+			}
 		}
 
 		i::after {
@@ -199,22 +296,24 @@ a {
  */
 
 .portfolio {
-	
 	background-color: $white;
-	
+
 	.projects {
 
 		@include wider-than(768px) {
 			display: flex;
+			max-width: 100%;
 			flex-wrap: wrap;
+			justify-content: center;
 		}	
 	}
 	
 	.project-tile {
-		flex: auto;
-		
-		background-color: yellow;
-		border: 2px solid black;
+		background-color: rgba($black, .09);
+		// border: 2px solid black;
+		padding: 10px;
+		margin: 5px;
+		border-radius: 10px;
 
 		img {
 			border-radius: 50%;
@@ -222,16 +321,21 @@ a {
 			margin: auto;
 
 			@include wider-than(480px) {
-				margin-right: 20px;
+				// margin-right: 20px;
 			}
 		}
 
 		@include wider-than(480px) {
-		 	display: flex;
+		 	
 		}
 
 		@include wider-than(768px) {
-			width: 40%;
+			flex: auto;
+			width: calc(50% - 30px);
+		}
+
+		@include wider-than(1000px) {
+			max-width: calc(33.33% - 30px);
 		}
 
 		.project-info {
@@ -262,8 +366,13 @@ a {
  */
 
 .education {
-
+	background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/desk-computer-1200px.jpg);
+	background-repeat: no-repeat;
+	// background-attachment: fixed;
+	background-size: cover;
+	
 	> div {
+		color: $white;
 
 		h3 {
 			font-weight: 400;
@@ -284,8 +393,8 @@ a {
  */
 
 .contact {
-	
 	background-color: $white;
+	
 	.social {
 
 		ul {
@@ -293,6 +402,7 @@ a {
 			text-align: center;
 			padding-left: 0;
 			margin-top: 50px;
+			
 			li {
 				display: inline-block;
 
@@ -303,7 +413,6 @@ a {
 					margin-left: 10px;
 					margin-right: 10px;
 					color: rgba($french-gray, .75);
-
 				}
 
 				a:hover {
@@ -315,7 +424,6 @@ a {
 }
 
 .primary-footer {
-
 	background-color: #000;
 	color: $french-gray;
 	
@@ -331,26 +439,7 @@ a {
   Components
 *****************************************/
 
-/**
- * Basic structure of all sections
- */
 
-.container {
-	width: 100%;
-	background-color: pink;
 
-	section {
-		padding: 50px 20px;
 
-		h2 {
-			font-size: 1.5em;
-			border-bottom: 2px solid rgba($french-gray, .8);
-			text-transform: uppercase;
-		}
 
-		> div {
-			width: 90%;
-			margin: 0 auto;
-		}
-	}
-}

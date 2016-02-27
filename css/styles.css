@@ -29,34 +29,77 @@ a {
   Layout
 *****************************************/
 /**
+ * Basic structure of all sections
+ */
+.page .container {
+  width: 100%; }
+  .page .container section {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px; }
+    .page .container section h2 {
+      font-size: 1.5em;
+      border-bottom: 2px solid rgba(190, 186, 194, 0.8);
+      text-transform: uppercase; }
+    .page .container section > div {
+      width: 90%;
+      margin: 0 auto; }
+
+.page .container:nth-child(even) h2 {
+  color: #fff; }
+
+/**
  * Header section
  */
 .primary-header {
-  padding: 20px 20px;
+  position: fixed;
+  width: 100%;
+  background-color: black;
   text-transform: uppercase;
   text-align: center; }
   .primary-header .logo {
-    margin-right: 20px; }
+    color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #777; }
+    @media screen and (min-width: 500px) {
+      .primary-header .logo {
+        margin-right: 20px;
+        height: 77px;
+        line-height: 77px; } }
   .primary-header .logo span {
-    color: white;
     background-color: #fa4032;
     font-weight: 400;
     padding-left: 5px;
     padding-right: 5px; }
   .primary-header .hamburger {
-    background-color: green; }
+    margin-left: 20px; }
+    .primary-header .hamburger .line:first-child {
+      margin-top: 5px; }
     .primary-header .hamburger .line {
       border-bottom: 4px solid #bbb;
       width: 35px;
-      margin-bottom: 6px; }
+      margin-bottom: 5px; }
     @media screen and (min-width: 500px) {
       .primary-header .hamburger {
         display: none; } }
+  .primary-header .main-nav {
+    border: 1px solid #777; }
+    @media screen and (min-width: 500px) {
+      .primary-header .main-nav {
+        border: 0; } }
   .primary-header .menu {
+    margin-top: 0;
     display: none;
-    margin: 0;
+    margin-bottom: 0;
     list-style-type: none;
-    padding-left: 0; }
+    padding-left: 0;
+    padding: 5px; }
+    .primary-header .menu a {
+      color: #999; }
+    .primary-header .menu a:hover {
+      color: #fff;
+      background-color: #fa4032; }
     @media screen and (min-width: 500px) {
       .primary-header .menu {
         display: -webkit-flex;
@@ -68,8 +111,7 @@ a {
           flex: auto; }
           .primary-header .menu li a {
             display: inline-block;
-            padding: 5px;
-            color: green; } }
+            padding: 20px; } }
   .primary-header .slide-menu {
     display: block;
     height: 360px; }
@@ -97,11 +139,11 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
   background-color: #999;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(../images/sublime-text-original.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(../images/sublime-text-1200px.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 200px;
+  height: 400px;
   text-align: center; }
   .hero h1 {
     color: #fff; }
@@ -129,20 +171,39 @@ a {
 /*
 * Skills section
 */
-.skills ul {
-  list-style-type: none;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-  .skills ul li {
-    margin: 5px;
-    width: 100%; }
-  .skills ul i::after {
-    content: "";
-    margin-right: 5px; }
+.skills {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/collaboration-1200px.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .skills ul {
+    list-style-type: none;
+    color: #fff;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0; }
+    .skills ul li {
+      -webkit-flex: auto;
+      -ms-flex: auto;
+      flex: auto;
+      font-size: 1.1em;
+      margin: 5px;
+      width: 100%; }
+      @media screen and (min-width: 480px) {
+        .skills ul li {
+          width: calc(50% - 10px); } }
+      @media screen and (min-width: 1000px) {
+        .skills ul li {
+          max-width: calc(33.33% - 10px); } }
+    .skills ul i::after {
+      content: "";
+      margin-right: 5px; }
 
 /**
  * Portfolio section
@@ -154,30 +215,31 @@ a {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      max-width: 100%;
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
   .portfolio .project-tile {
-    -webkit-flex: auto;
-    -ms-flex: auto;
-    flex: auto;
-    background-color: yellow;
-    border: 2px solid black; }
+    background-color: rgba(0, 0, 0, 0.09);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px; }
     .portfolio .project-tile img {
       border-radius: 50%;
       display: block;
       margin: auto; }
-      @media screen and (min-width: 480px) {
-        .portfolio .project-tile img {
-          margin-right: 20px; } }
-    @media screen and (min-width: 480px) {
-      .portfolio .project-tile {
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex; } }
     @media screen and (min-width: 768px) {
       .portfolio .project-tile {
-        width: 40%; } }
+        -webkit-flex: auto;
+        -ms-flex: auto;
+        flex: auto;
+        width: calc(50% - 30px); } }
+    @media screen and (min-width: 1000px) {
+      .portfolio .project-tile {
+        max-width: calc(33.33% - 30px); } }
     .portfolio .project-tile .project-info .technology-used {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -199,12 +261,17 @@ a {
 /**
  * Education section
  */
-.education > div h3 {
-  font-weight: 400; }
-
-.education > div h4 {
-  padding-left: 10px;
-  border-left: 2px solid #fa4032; }
+.education {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/desk-computer-1200px.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .education > div {
+    color: #fff; }
+    .education > div h3 {
+      font-weight: 400; }
+    .education > div h4 {
+      padding-left: 10px;
+      border-left: 2px solid #fa4032; }
 
 /**
  * Contact section
@@ -239,18 +306,3 @@ a {
 /****************************************
   Components
 *****************************************/
-/**
- * Basic structure of all sections
- */
-.container {
-  width: 100%;
-  background-color: pink; }
-  .container section {
-    padding: 50px 20px; }
-    .container section h2 {
-      font-size: 1.5em;
-      border-bottom: 2px solid rgba(190, 186, 194, 0.8);
-      text-transform: uppercase; }
-    .container section > div {
-      width: 90%;
-      margin: 0 auto; }

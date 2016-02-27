@@ -38,6 +38,14 @@ a {
     padding-bottom: 100px;
     padding-left: 20px;
     padding-right: 20px; }
+    @media screen and (min-width: 480px) {
+      .page .container section {
+        padding-left: 40px;
+        padding-right: 40px; } }
+    @media screen and (min-width: 768px) {
+      .page .container section {
+        padding-left: 100px;
+        padding-right: 100px; } }
     .page .container section h2 {
       font-size: 1.5em;
       border-bottom: 2px solid rgba(190, 186, 194, 0.8);
@@ -65,8 +73,7 @@ a {
     @media screen and (min-width: 500px) {
       .primary-header .logo {
         margin-right: 20px;
-        height: 77px;
-        line-height: 77px; } }
+        border-bottom: 0; } }
   .primary-header .logo span {
     background-color: #fa4032;
     font-weight: 400;
@@ -84,7 +91,7 @@ a {
       .primary-header .hamburger {
         display: none; } }
   .primary-header .main-nav {
-    border: 1px solid #777; }
+    border-bottom: 1px solid #777; }
     @media screen and (min-width: 500px) {
       .primary-header .main-nav {
         border: 0; } }
@@ -93,8 +100,7 @@ a {
     display: none;
     margin-bottom: 0;
     list-style-type: none;
-    padding-left: 0;
-    padding: 5px; }
+    padding-left: 0; }
     .primary-header .menu a {
       color: #999; }
     .primary-header .menu a:hover {

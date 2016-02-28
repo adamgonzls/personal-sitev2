@@ -20,7 +20,6 @@ html {
     font: inherit;
 }
 
-
 /****************************************
   Defaults
 *****************************************/
@@ -43,10 +42,8 @@ a {
  */
 
 .page {
-	
 	.container {
 		width: 100%;
-		// background-color: pink;
 	
 		section {
 			padding-top: 50px;
@@ -64,7 +61,6 @@ a {
 				padding-right: 100px;
 			}
 
-
 			h2 {
 				font-size: 1.9em;
 				border-bottom: 2px solid rgba($french-gray, .8);
@@ -80,16 +76,12 @@ a {
 
 	.container:nth-child(even) h2 {
 		color: $white;
-		// background-color: yellow;
 	}
 
 	.container:nth-child(odd) h2 {
-		// color: red;
-		// background-color: blue;
+
 	}
-
 }
-
 
 /**
  * Header section
@@ -99,10 +91,8 @@ a {
 	position: fixed;
 	width: 100%;
 	background-color: $black;
-	// padding: 20px 20px;
 	text-transform: uppercase;
 	text-align: center;
-
 
 	.logo {
 		color: $white;
@@ -116,7 +106,6 @@ a {
 	}
 
 	.logo span {
-		// color: $white;
 		background-color: $rubyred;
 		font-weight: 400;
 		padding-left: 5px;
@@ -139,7 +128,6 @@ a {
 		@include wider-than(500px) {
 			display: none;
 		}
-	
 	}
 	
 	.main-nav {
@@ -156,7 +144,6 @@ a {
 		margin-bottom: 0;
 		list-style-type: none;
 		padding-left: 0;
-		// padding: 5px;
 
 		a {
 			color: #999;
@@ -167,10 +154,8 @@ a {
 			background-color: $rubyred;
 		}
 
-
 		@include wider-than(500px) {
 			display: flex;
-			// width: 100%;
 
 			li {
 				flex: auto;
@@ -178,14 +163,9 @@ a {
 				a {
 					display: inline-block;
 					padding: 20px;
-
 				}
-
-
 			}
 		}
-
-
 	}
 
 	.slide-menu {
@@ -218,7 +198,6 @@ a {
 	background-size: cover;
 	height: 500px;
 	text-align: center;
-	// padding-top: 100px;
 	
 	@include wider-than(480px) {
 		height: 500px;
@@ -229,19 +208,16 @@ a {
 		color: $white;
 		font-size: 3em;
 
-		@include wider-than(480px) {
-
+		@include less-than(320px) {
+			font-size: 2em;
 		}
 	}
-
 }
 
 .about {
 	background-color: $white;
 
 	.bio {
-		// display: flex;
-		// flex-direction: column;
 		justify-content: center;
 		text-align: center;
 
@@ -253,10 +229,6 @@ a {
 			display: block;
 			margin: 0 auto;
 			border-radius: 50%;
-
-			@include wider-than(500px) {
-				
-			}
 
 			@include wider-than(600px) {
 				margin: 0 20px;
@@ -279,7 +251,6 @@ a {
 .skills {
 	background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/collaboration-1200px.jpg);
 	background-repeat: no-repeat;
-	// background-attachment: fixed;
 	background-size: cover;
 
 	ul {
@@ -311,14 +282,17 @@ a {
 	}
 }
 
-
-
 /**
  * Portfolio section
  */
 
 .portfolio {
 	background-color: $white;
+	
+	@include less-than(320px) {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
 
 	.projects {
 
@@ -332,18 +306,16 @@ a {
 	
 	.project-tile {
 		background-color: rgba($black, .09);
-		// border: 2px solid black;
 		padding: 20px;
 		margin: 5px;
-		border-radius: 10px;
 
 		img {
 			border-radius: 50%;
 			display: block;
 			margin: auto;
 
-			@include wider-than(480px) {
-				// margin-right: 20px;
+			@include less-than(320px) {
+				max-width: 100%;
 			}
 		}
 
@@ -379,7 +351,6 @@ a {
 				padding-left: 0;
 
 				li {
-					// flex: auto;
 					font-size: .75em;
 					font-weight: 100;
 					margin: 2px;
@@ -400,7 +371,6 @@ a {
 .education {
 	background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/desk-computer-1200px.jpg);
 	background-repeat: no-repeat;
-	// background-attachment: fixed;
 	background-size: cover;
 	
 	> div {
@@ -419,9 +389,6 @@ a {
 		}
 	}
 }
-
-
-
 
 /**
  * Contact section
@@ -468,7 +435,6 @@ a {
 		padding: 20px;
 	}
 }
-
 
 /****************************************
   Components

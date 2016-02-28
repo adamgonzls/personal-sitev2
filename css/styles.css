@@ -47,7 +47,7 @@ a {
         padding-left: 100px;
         padding-right: 100px; } }
     .page .container section h2 {
-      font-size: 1.5em;
+      font-size: 1.9em;
       border-bottom: 2px solid rgba(190, 186, 194, 0.8);
       text-transform: uppercase; }
     .page .container section > div {
@@ -149,30 +149,39 @@ a {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 400px;
+  height: 500px;
   text-align: center; }
+  @media screen and (min-width: 480px) {
+    .hero {
+      height: 500px; } }
   .hero h1 {
-    color: #fff; }
+    margin-top: 90px;
+    color: #fff;
+    font-size: 3em; }
 
 .about {
   background-color: #fff; }
-  .about > div {
+  .about .bio {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center; }
     @media screen and (min-width: 500px) {
-      .about > div {
+      .about .bio {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex; } }
-    .about > div img {
+    .about .bio img {
       display: block;
       margin: 0 auto;
       border-radius: 50%; }
       @media screen and (min-width: 600px) {
-        .about > div img {
+        .about .bio img {
           margin: 0 20px; } }
+    @media screen and (min-width: 500px) {
+      .about .bio h1,
+      .about .bio p {
+        width: 100%; } }
 
 /*
 * Skills section
@@ -192,8 +201,7 @@ a {
     flex-wrap: wrap;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    padding-left: 0; }
+    justify-content: center; }
     .skills ul li {
       -webkit-flex: auto;
       -ms-flex: auto;
@@ -230,7 +238,7 @@ a {
       justify-content: center; } }
   .portfolio .project-tile {
     background-color: rgba(0, 0, 0, 0.09);
-    padding: 10px;
+    padding: 20px;
     margin: 5px;
     border-radius: 10px; }
     .portfolio .project-tile img {
@@ -242,10 +250,14 @@ a {
         -webkit-flex: auto;
         -ms-flex: auto;
         flex: auto;
-        width: calc(50% - 30px); } }
+        max-width: calc(50% - 20px); } }
     @media screen and (min-width: 1000px) {
       .portfolio .project-tile {
-        max-width: calc(33.33% - 30px); } }
+        max-width: calc(33.33% - 10px); } }
+    .portfolio .project-tile .project-info h3 {
+      font-size: 1.2em;
+      font-weight: 400;
+      text-transform: uppercase; }
     .portfolio .project-tile .project-info .technology-used {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -274,10 +286,13 @@ a {
   .education > div {
     color: #fff; }
     .education > div h3 {
-      font-weight: 400; }
+      font-weight: 400;
+      font-size: 1.5em;
+      text-transform: uppercase; }
     .education > div h4 {
       padding-left: 10px;
-      border-left: 2px solid #fa4032; }
+      border-left: 2px solid #fa4032;
+      font-size: 1em; }
 
 /**
  * Contact section

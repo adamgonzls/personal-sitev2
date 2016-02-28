@@ -66,7 +66,7 @@ a {
 
 
 			h2 {
-				font-size: 1.5em;
+				font-size: 1.9em;
 				border-bottom: 2px solid rgba($french-gray, .8);
 				text-transform: uppercase;
 			}
@@ -205,10 +205,7 @@ a {
 	@include wider-than(768px) {
 		font-size: 1.5em;	
 	}
-	
 }
-
-
 
 .hero {
 	display: flex;
@@ -219,16 +216,22 @@ a {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	height: 400px;
+	height: 500px;
 	text-align: center;
-	// margin-top: 89px;
+	// padding-top: 100px;
 	
 	@include wider-than(480px) {
-		// height: 300px;
+		height: 500px;
 	}
 
 	h1 {
+		margin-top: 90px;
 		color: $white;
+		font-size: 3em;
+
+		@include wider-than(480px) {
+
+		}
 	}
 
 }
@@ -236,7 +239,7 @@ a {
 .about {
 	background-color: $white;
 
-	> div {
+	.bio {
 		// display: flex;
 		// flex-direction: column;
 		justify-content: center;
@@ -251,8 +254,19 @@ a {
 			margin: 0 auto;
 			border-radius: 50%;
 
-			@include wider-than(600px){
+			@include wider-than(500px) {
+				
+			}
+
+			@include wider-than(600px) {
 				margin: 0 20px;
+			}
+		}
+
+		h1,
+		p {
+			@include wider-than(500px) {
+				width: 100%;
 			}
 		}
 	}
@@ -274,14 +288,12 @@ a {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		padding-left: 0;
 		
 		li {
 			flex: auto;
 			font-size: 1.1em;
 			margin: 5px;
 			width: 100%;
-			// align-text: center;
 
 			@include wider-than(480px) {
 				width: calc(50% - 10px);
@@ -321,7 +333,7 @@ a {
 	.project-tile {
 		background-color: rgba($black, .09);
 		// border: 2px solid black;
-		padding: 10px;
+		padding: 20px;
 		margin: 5px;
 		border-radius: 10px;
 
@@ -341,14 +353,24 @@ a {
 
 		@include wider-than(768px) {
 			flex: auto;
-			width: calc(50% - 30px);
+			max-width: calc(50% - 20px);
 		}
 
 		@include wider-than(1000px) {
-			max-width: calc(33.33% - 30px);
+			max-width: calc(33.33% - 10px);
 		}
 
 		.project-info {
+			
+			h3 {
+				font-size: 1.2em;
+				font-weight: 400;
+				text-transform: uppercase;
+			}
+
+			p {
+
+			}
 
 			.technology-used {
 				display: flex;
@@ -386,11 +408,14 @@ a {
 
 		h3 {
 			font-weight: 400;
+			font-size: 1.5em;
+			text-transform: uppercase;
 		}
 
 		h4 {
 			padding-left: 10px;
 			border-left: 2px solid $rubyred;
+			font-size: 1em;
 		}
 	}
 }

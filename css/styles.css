@@ -195,7 +195,7 @@ a {
 * Skills section
 */
 .skills {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(../images/tools-1200px.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/tools-1200px.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -295,7 +295,7 @@ a {
  * Education section
  */
 .education {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/books-1200px.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/books-1200px.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }

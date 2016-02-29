@@ -145,6 +145,14 @@ a {
 		list-style-type: none;
 		padding-left: 0;
 
+		li:first-child {
+			border-top: 1px solid #777;
+		}
+
+		li {
+			padding: 5px;
+		}
+
 		a {
 			color: #999;
 		}
@@ -159,6 +167,7 @@ a {
 
 			li {
 				flex: auto;
+				border-top: 0;
 
 				a {
 					display: inline-block;
@@ -192,7 +201,7 @@ a {
 	flex-direction: column;
 	justify-content: center;
 	background-color: #999;
-	background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .9)), url(../images/sublime-text-1200px.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)), url(../images/computer-ready-1200px.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -249,8 +258,9 @@ a {
 */
 
 .skills {
-	background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/collaboration-1200px.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url(../images/tools-1200px.jpg);
 	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: cover;
 
 	ul {
@@ -369,8 +379,9 @@ a {
  */
 
 .education {
-	background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/desk-computer-1200px.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/books-1200px.jpg);
 	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: cover;
 	
 	> div {

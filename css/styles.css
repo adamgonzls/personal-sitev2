@@ -185,22 +185,22 @@ a {
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center; }
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 600px) {
       .about .bio {
         display: -webkit-flex;
         display: -ms-flexbox;
-        display: flex; } }
+        display: flex;
+        text-align: left; } }
     .about .bio img {
       display: block;
       margin: 0 auto;
       border-radius: 50%; }
       @media screen and (min-width: 600px) {
         .about .bio img {
-          margin: 0 20px; } }
-    @media screen and (min-width: 500px) {
-      .about .bio h1,
-      .about .bio p {
-        width: 100%; } }
+          margin-left: 20px;
+          margin-right: 40px; } }
+    .about .bio p {
+      line-height: 2; }
 
 /*
 * Skills section

@@ -99,10 +99,13 @@ a {
 		padding: 20px;
 		border-bottom: 1px solid #777;
 
-		@include wider-than(500px) {
-			margin-right: 20px;
+		@include wider-than(600px) {
 			border-bottom: 0;
 		} 
+
+		@include wider-than(650px) {
+			margin-right: 20px;
+		}
 	}
 
 	.logo span {
@@ -125,7 +128,7 @@ a {
 			margin-bottom: 5px;
 		}
 
-		@include wider-than(500px) {
+		@include wider-than(600px) {
 			display: none;
 		}
 	}
@@ -133,7 +136,7 @@ a {
 	.main-nav {
 		border-bottom: 1px solid #777;
 
-		@include wider-than(500px) {
+		@include wider-than(600px) {
 			border: 0;
 		}
 	}
@@ -147,10 +150,18 @@ a {
 
 		li:first-child {
 			border-top: 1px solid #777;
+
+			@include wider-than(600px) {
+				border-top: 0;
+			}
 		}
 
 		li {
 			padding: 5px;
+
+			@include wider-than(600px) {
+				padding: 0;
+			}
 		}
 
 		a {
@@ -162,7 +173,7 @@ a {
 			background-color: $rubyred;
 		}
 
-		@include wider-than(500px) {
+		@include wider-than(600px) {
 			display: flex;
 
 			li {
@@ -182,18 +193,28 @@ a {
 		height: 360px;
 	}
 	
-	@include wider-than(500px) {
-		display: flex;
-		font-size: .9em;
-	}
+	// @include wider-than(500px) {
+		
+	// 	font-size: .8em;
+	// }
 
 	@include wider-than(600px) {
-		font-size: 1em;
+		display: flex;
+		font-size: .7em;
+	}
+
+	@include wider-than(650px) {
+		font-size: .8em;
 	}
 
 	@include wider-than(768px) {
+		font-size: 1em;	
+	}
+
+	@include wider-than(1000px) {
 		font-size: 1.5em;	
 	}
+
 }
 
 .hero {

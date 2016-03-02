@@ -77,10 +77,6 @@ a {
 	.container:nth-child(even) h2 {
 		color: $white;
 	}
-
-	.container:nth-child(odd) h2 {
-
-	}
 }
 
 /**
@@ -192,11 +188,6 @@ a {
 		display: block;
 		height: 360px;
 	}
-	
-	// @include wider-than(500px) {
-		
-	// 	font-size: .8em;
-	// }
 
 	@include wider-than(600px) {
 		display: flex;
@@ -260,11 +251,6 @@ a {
 			display: block;
 			margin: 0 auto;
 			border-radius: 50%;
-
-			// @include wider-than(500px) {
-			// 	margin-left: 20px;
-			// 	margin-right: 20px;
-			// }
 
 			@include wider-than(600px) {
 				margin-left: 20px;
@@ -475,8 +461,3 @@ a {
 /****************************************
   Components
 *****************************************/
-
-
-
-
-

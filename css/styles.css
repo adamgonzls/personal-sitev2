@@ -1,4 +1,4 @@
-/****************************************
+/***************************************
   Inherited Syles
 *****************************************/
 /*
@@ -120,10 +120,12 @@ a {
       background-color: #fa4032; }
     @media screen and (min-width: 600px) {
       .primary-header .menu {
+        display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex; }
         .primary-header .menu li {
+          -webkit-box-flex: 1;
           -webkit-flex: auto;
           -ms-flex: auto;
           flex: auto;
@@ -135,6 +137,7 @@ a {
     display: block; }
   @media screen and (min-width: 600px) {
     .primary-header {
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
@@ -150,16 +153,21 @@ a {
       font-size: 1.5em; } }
 
 .hero {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   background-color: #999;
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/computer-ready-1200px.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/computer-ready-1200px.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -180,12 +188,14 @@ a {
 .about {
   background-color: #fff; }
   .about .bio {
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center; }
     @media screen and (min-width: 600px) {
       .about .bio {
+        display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
@@ -205,6 +215,7 @@ a {
 * Skills section
 */
 .skills {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/tools-1200px.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/tools-1200px.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -212,16 +223,19 @@ a {
   .skills ul {
     list-style-type: none;
     color: #fff;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
     .skills ul li {
+      -webkit-box-flex: 1;
       -webkit-flex: auto;
       -ms-flex: auto;
       flex: auto;
@@ -230,9 +244,11 @@ a {
       width: 100%; }
       @media screen and (min-width: 480px) {
         .skills ul li {
+          width: -webkit-calc(50% - 10px);
           width: calc(50% - 10px); } }
       @media screen and (min-width: 1000px) {
         .skills ul li {
+          max-width: -webkit-calc(33.33% - 10px);
           max-width: calc(33.33% - 10px); } }
     .skills ul i::after {
       content: "";
@@ -249,6 +265,7 @@ a {
       padding-right: 0 !important; } }
   @media screen and (min-width: 768px) {
     .portfolio .projects {
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
@@ -256,6 +273,7 @@ a {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center; } }
@@ -272,18 +290,22 @@ a {
           max-width: 100%; } }
     @media screen and (min-width: 768px) {
       .portfolio .project-tile {
+        -webkit-box-flex: 1;
         -webkit-flex: auto;
         -ms-flex: auto;
         flex: auto;
+        max-width: -webkit-calc(50% - 20px);
         max-width: calc(50% - 20px); } }
     @media screen and (min-width: 1000px) {
       .portfolio .project-tile {
+        max-width: -webkit-calc(33.33% - 10px);
         max-width: calc(33.33% - 10px); } }
     .portfolio .project-tile .project-info h3 {
       font-size: 1.2em;
       font-weight: 400;
       text-transform: uppercase; }
     .portfolio .project-tile .project-info .technology-used {
+      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
@@ -302,29 +324,56 @@ a {
         border-radius: 3px; }
 
 /**
+ * Work section
+ */
+#work {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/skills-tools-1200px.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/skills-tools-1200px.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff; }
+  #work .job-container h3 {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 1.5em; }
+  #work .job-container h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.7); }
+  #work .job-container ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: 0; }
+    #work .job-container ul li {
+      margin-top: 5px;
+      padding-left: 10px;
+      border-left: 2px solid #fa4032; }
+
+/**
  * Education section
  */
-.education {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/books-1200px.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
-  .education > div {
-    color: #fff; }
-    .education > div h3 {
-      font-weight: 400;
-      font-size: 1.5em;
-      text-transform: uppercase; }
-    .education > div h4 {
-      padding-left: 10px;
-      border-left: 2px solid #fa4032;
-      font-size: 1em; }
+.education > div h3 {
+  font-weight: 400;
+  font-size: 1.5em;
+  text-transform: uppercase; }
+
+.education > div h4 {
+  padding-left: 10px;
+  border-left: 2px solid #fa4032;
+  font-size: 1em; }
 
 /**
  * Contact section
  */
 .contact {
-  background-color: #fff; }
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/books-1200px.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/books-1200px.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
   .contact .social ul {
     list-style-type: none;
     text-align: center;
@@ -338,7 +387,7 @@ a {
         padding: 10px;
         margin-left: 10px;
         margin-right: 10px;
-        color: rgba(190, 186, 194, 0.75); }
+        color: rgba(190, 186, 194, 0.85); }
       .contact .social ul li a:hover {
         color: #bebac2; }
 
@@ -352,4 +401,4 @@ a {
 
 /****************************************
   Components
-*****************************************/
+****************************************/

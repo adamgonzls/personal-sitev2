@@ -281,6 +281,8 @@ a {
     background-color: rgba(0, 0, 0, 0.09);
     padding: 20px;
     margin: 5px; }
+    .portfolio .project-tile:hover {
+      box-shadow: 2px 1px 8px 1px #ccc; }
     .portfolio .project-tile img {
       border-radius: 50%;
       display: block;

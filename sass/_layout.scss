@@ -328,6 +328,9 @@ a {
 		background-color: rgba($black, .09);
 		padding: 20px;
 		margin: 5px;
+		&:hover {
+			box-shadow: 2px 1px 8px 1px #ccc;
+		}
 
 		img {
 			border-radius: 50%;

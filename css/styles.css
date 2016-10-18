@@ -278,11 +278,14 @@ a {
       -ms-flex-pack: center;
       justify-content: center; } }
   .portfolio .project-tile {
-    background-color: rgba(0, 0, 0, 0.09);
+    margin: 5px;
+    border: 2px solid rgba(190, 186, 194, 0.8);
     padding: 20px;
-    margin: 5px; }
+    background-color: rgba(0, 0, 0, 0.09);
+    -webkit-transition: box-shadow .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out; }
     .portfolio .project-tile:hover {
-      box-shadow: 2px 1px 8px 1px #ccc; }
+      box-shadow: 0 1px 10px 2px #ccc; }
     .portfolio .project-tile img {
       border-radius: 50%;
       display: block;

@@ -325,11 +325,13 @@ a {
 	}
 	
 	.project-tile {
-		background-color: rgba($black, .09);
-		padding: 20px;
 		margin: 5px;
+		border: 2px solid rgba(190, 186, 194, 0.8);
+		padding: 20px;
+		background-color: rgba($black, .09);
+		transition: box-shadow .2s ease-in-out;
 		&:hover {
-			box-shadow: 2px 1px 8px 1px #ccc;
+			box-shadow: 0 1px 10px 2px #ccc;
 		}
 
 		img {

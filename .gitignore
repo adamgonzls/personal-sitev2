@@ -1,3 +1,5 @@
+*.log
 node_modules/
+.DS_Store
 personal-sitev2.sublime-project
 personal-sitev2.sublime-workspace
